@@ -14,10 +14,15 @@ fi
 
 # My aliases
 
-alias pyenv-play='. ~/Coding/pyvenvs/play/bin/activate'
+alias pyvenv-play='. ~/Coding/pyvenvs/play/bin/activate'
 alias ipynote='cd ~/Coding/ipynotes/ && ipython notebook'
 alias ipy-spark='IPYTHON=1 pyspark'
 alias ipynote-spark='cd ~/Coding/ipynotes/ && IPYTHON_OPTS=notebook pyspark'
+alias reset-tunnel='sudo ipfw -q -f flush'
+
+ssh-tunnel() {
+    sshuttle --dns -r rafaelbarreto@"$1" 0/0
+}
 
 # My exports
 
